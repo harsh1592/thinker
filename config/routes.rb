@@ -1,9 +1,20 @@
 Thinker::Application.routes.draw do
+ 
+  
+ 
+  match '/vision', to: 'welcome#vision', via: 'get'
+  match '/service', to: 'welcome#service', via: 'get'
+  match '/project', to: 'welcome#project', via: 'get'
+  match '/client', to: 'welcome#client', via: 'get'
+  match '/about', to: 'welcome#about', via: 'get'
+  match '/contact', to: 'welcome#contact', via: 'get'
+  match '/team', to: 'welcome#team', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
